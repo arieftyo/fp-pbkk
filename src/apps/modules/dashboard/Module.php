@@ -22,7 +22,7 @@ class Module implements ModuleDefinitionInterface
             'Its\Example\Dashboard\Core\Application\Service' => __DIR__ . '/Core/Application/Service',
             'Its\Example\Dashboard\Core\Application\EventSubscriber' => __DIR__ . '/Core/Application/EventSubscriber',
 
-            'Its\Example\Dashboard\Infrastructure\Persistence' => __DIR__ . '/Core/Infrastructure/Persistence',
+            'Its\Example\Dashboard\Infrastructure\Persistence' => __DIR__ . '/Infrastructure/Persistence',
 
             'Its\Example\Dashboard\Presentation\Web\Controller' => __DIR__ . '/Presentation/Web/Controller',
             'Its\Example\Dashboard\Presentation\Web\Validator' => __DIR__ . '/Presentation/Web/Validator',

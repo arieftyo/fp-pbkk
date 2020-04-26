@@ -18,40 +18,40 @@ $container['router'] = function() use ($defaultModule, $modules) {
 	/**
 	 * Not Found Routing
 	 */
-	$router->notFound(
-		[
-			'namespace' => 'Its\Common\Controller',
-			'controller' => 'error',
-			'action'     => 'route404',
-		]
-	);
+	// $router->notFound(
+	// 	[
+	// 		'namespace' => 'Its\Common\Controller',
+	// 		'controller' => 'error',
+	// 		'action'     => 'route404',
+	// 	]
+	// );
 
-	/**
-	 * Error Routing
-	 */
-	$router->addGet('/forbidden', [
-		'namespace' => "Its\Common\Controller",
-		'controller' => "error",
-		'action' => "route403"
-	]);
+	// /**
+	//  * Error Routing
+	//  */
+	// $router->addGet('/forbidden', [
+	// 	'namespace' => "Its\Common\Controller",
+	// 	'controller' => "error",
+	// 	'action' => "route403"
+	// ]);
 	
-	$router->addGet('/error', [
-		'namespace' => "Its\Common\Controller",
-		'controller' => "error",
-		'action' => "routeErrorCommon"
-	]);
+	// $router->addGet('/error', [
+	// 	'namespace' => "Its\Common\Controller",
+	// 	'controller' => "error",
+	// 	'action' => "routeErrorCommon"
+	// ]);
 	
-	$router->addGet('/expired', [
-		'namespace' => "Its\Common\Controller",
-		'controller' => "error",
-		'action' => "routeErrorState"
-	]);
+	// $router->addGet('/expired', [
+	// 	'namespace' => "Its\Common\Controller",
+	// 	'controller' => "error",
+	// 	'action' => "routeErrorState"
+	// ]);
 
-	$router->addGet('/maintenance', [
-		'namespace' => "Its\Common\Controller",
-		'controller' => "error",
-		'action' => "maintenance"
-	]);
+	// $router->addGet('/maintenance', [
+	// 	'namespace' => "Its\Common\Controller",
+	// 	'controller' => "error",
+	// 	'action' => "maintenance"
+	// ]);
 
 	/**
 	 * Module Routing
@@ -121,7 +121,19 @@ $container['router'] = function() use ($defaultModule, $modules) {
 			
 			if (file_exists($webModuleRouting) && is_file($webModuleRouting)) {
 				include $webModuleRouting;
+
+				$router->add(
+					'/register',
+					[
+						'namespace' => 'Its\Example\Dashboard\Presentation\Web\Controller',
+						'module' => 'dashboard',
+						'controller' => 'register',
+						'action'     => 'index',
+					]
+				);
 			}
+
+			
 
 			$apiModuleRouting = APP_PATH . '/modules/'. $moduleName .'/config/routes/api.php';
 			
