@@ -69,3 +69,127 @@
 [26-Apr-2020 05:53:42 Asia/Jakarta] PHP   5. Its\Example\Dashboard\Presentation\Web\Controller\IndexController->initialize() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
 [26-Apr-2020 05:53:42 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\IndexController->__get() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/IndexController.php:13
 [26-Apr-2020 05:53:42 Asia/Jakarta] PHP   7. trigger_error() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/IndexController.php:13
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP Fatal error:  Declaration of Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository::addUser($user) must be compatible with Its\Example\Dashboard\Core\Domain\Repository\UserRepositoryInterface::addUser($user): Its\Example\Dashboard\Core\Domain\Model\User in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 34
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   5. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->initialize() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   6. Phalcon\Di\FactoryDefault->get() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:16
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   7. Phalcon\Di\Service->resolve() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:16
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   8. Phalcon\Di\FactoryDefault->{closure:/mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:44-46}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:16
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP   9. Phalcon\Di\FactoryDefault->get() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:45
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP  10. Phalcon\Di\Service->resolve() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:45
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP  11. Phalcon\Di\FactoryDefault->{closure:/mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:36-38}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:45
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP  12. spl_autoload_call() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:37
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP  13. Phalcon\Loader->autoLoad() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:37
+[26-Apr-2020 20:48:40 Asia/Jakarta] PHP  14. Phalcon\Loader->autoLoad() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/config/services.php:37
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Undefined variable: user in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php on line 19
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Undefined variable: user in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Undefined variable: user in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 37
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 37
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Undefined variable: user in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:50:24 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Notice:  Undefined variable: user in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php on line 19
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 36
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 37
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Notice:  Trying to access array offset on value of type null in /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Infrastructure/Persistence/SqlServerUserRepository.php on line 38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP Stack trace:
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   1. {main}() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:0
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   2. Bootstrap->init() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/public/index.php:23
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   3. Bootstrap->handle() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   4. Phalcon\Mvc\Dispatcher->dispatch() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   5. Phalcon\Mvc\Dispatcher->callActionMethod() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   6. Its\Example\Dashboard\Presentation\Web\Controller\RegisterController->registerSubmitAction() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/Bootstrap.php:38
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   7. Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService->execute() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Presentation/Web/Controller/RegisterController.php:36
+[26-Apr-2020 20:51:14 Asia/Jakarta] PHP   8. Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository->addUser() /mnt/e/Kuliah/semester 6/pbkk/fp-pbkk/src/apps/modules/dashboard/Core/Application/Service/AddUser/AddUserService.php:19

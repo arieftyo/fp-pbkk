@@ -121,16 +121,6 @@ $container['router'] = function() use ($defaultModule, $modules) {
 			
 			if (file_exists($webModuleRouting) && is_file($webModuleRouting)) {
 				include $webModuleRouting;
-
-				$router->add(
-					'/register',
-					[
-						'namespace' => 'Its\Example\Dashboard\Presentation\Web\Controller',
-						'module' => 'dashboard',
-						'controller' => 'register',
-						'action'     => 'index',
-					]
-				);
 			}
 
 			

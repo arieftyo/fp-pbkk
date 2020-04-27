@@ -1,9 +1,10 @@
 <?php
 
+use Its\Example\Dashboard\Core\Application\Service\AddUser\AddUserService;
 use Phalcon\Mvc\View;
 use Its\Example\Dashboard\Infrastructure\Persistence\SqlServerUserRepository;
 use Its\Example\Dashboard\Core\Application\Service\FindUserById\FindUserByIdService;
-
+use Its\Example\Dashboard\Core\Application\Service\LoginUser\LoginUserService;
 
 $di['view'] = function () {
     $view = new View();
@@ -17,6 +18,13 @@ $di['view'] = function () {
 
     return $view;
 };
+
+$di->setShared('session', function() {
+    $session = new Session();
+	$session->start();
+
+	return $session;
+});
 
 $di['db'] = function () use ($di) {
     $config = $di->get('config');
@@ -40,3 +48,10 @@ $di->setShared('findUserByIdService', function () use ($di){
     return new FindUserByIdService($di->get('sqlServerUserRepository'));
 });
 
+$di->setShared('addUserService', function () use ($di){
+    return new AddUserService($di->get('sqlServerUserRepository'));
+});
+
+$di->setShared('loginUserService', function () use ($di){
+    return new LoginUserService($di->get('sqlServerUserRepository'));
+});

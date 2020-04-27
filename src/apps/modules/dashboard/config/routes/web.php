@@ -1,12 +1,39 @@
 <?php
 
 $router->add(
-    '/register/coba',
+    '/register',
     [
         'namespace' => 'Its\Example\Dashboard\Presentation\Web\Controller',
         'module' => 'dashboard',
-        'controller' => 'register',
+        'controller' => 'auth',
         'action'     => 'coba',
+    ]
+);
+
+$router->addPost('/register/submit', [
+    'namespace' => 'Its\Example\Dashboard\Presentation\Web\Controller',
+    'module' => 'dashboard',
+    'controller' => 'auth',
+    'action' => 'registerSubmit'
+]);
+
+$router->add(
+    '/login',
+    [
+        'namespace' => 'Its\Example\Dashboard\Presentation\Web\Controller',
+        'module' => 'dashboard',
+        'controller' => 'auth',
+        'action'     => 'login',
+    ]
+);
+
+$router->addPost(
+    '/login/submit',
+    [
+        'namespace' => 'Its\Example\Dashboard\Presentation\Web\Controller',
+        'module' => 'dashboard',
+        'controller' => 'auth',
+        'action'     => 'loginSubmit',
     ]
 );
 
