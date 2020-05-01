@@ -20,14 +20,7 @@ class AuthController extends Controller
 
     public function indexAction()
     {
-        // $db = $this->getDI()->get('db');
-
-        // $sql = "";
-
-        // $result = $db->fetchOne($sql, \Phalcon\Db\Enum::FETCH_ASSOC);
-
-        // echo var_dump($result);
-        echo 'yeyeye';
+        
     }
 
     public function registerSubmitAction()
@@ -36,7 +29,7 @@ class AuthController extends Controller
 		$user['email'] = $this->request->getPost('email');
         $user['password'] = $this->request->getPost('password');
         $this->addUserService->execute($user);
-        echo 'lala';
+        $this->response->redirect('/');
     }
 
     public function cobaAction(){
@@ -44,21 +37,39 @@ class AuthController extends Controller
     }
 
     public function loginAction(){
+        if($this->session->get('auth') !== null)
+        {
+            $this->response->redirect('/');
+        }
         $this->view->pick('login');
     }
 
     public function loginSubmitAction(){
         $user['email'] = $this->request->getPost('email');
         $user['password'] = $this->request->getPost('password');
-        $result = $this->loginUserService->execute($user);
-        if($result){
+        try{
+            $result = $this->loginUserService->execute($user);
             $this->session->set('auth', array(
-				'email' => $user['email'],
+                'email' => $result->getEmail(),
+                'nama' =>$result->getNama(),
+                'password' =>$result->getPassword(),
+                'id' => $result->getId(),
             ));
-            var_dump($this->session);
-            die();
-
+            $this->response->redirect('/');
         }
+        catch(\Exception $exception){
+            $this->flashSession->error("Invalid Username / Password");
+			return $this->response->redirect('login');
+        }
+         
+    }
 
+    public function logOutAction(){
+        $this->session->destroy();
+        $this->response->redirect('/');
+    }
+
+    public function formPesanAction(){
+        $this->view->pick('form-pesan');
     }
 }

@@ -61,8 +61,7 @@
 
                 </div>
 
-                <a href="#" class="form-log-in-with-existing">Already have an account? Login here &rarr;</a>
-
+                
             </div>
         </form>
 

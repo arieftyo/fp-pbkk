@@ -17,7 +17,7 @@ class LoginUserService{
         try {
 
             $result = $this->repository->login($data);
-            if(!$result){
+            if(!$result->isExist()){
                 throw new Exception('tidak dapat melakukan login');
             }
         } catch (\Exception $exception){

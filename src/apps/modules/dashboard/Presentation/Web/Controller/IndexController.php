@@ -7,23 +7,19 @@ use Phalcon\Mvc\Controller;
 class IndexController extends Controller
 {
     protected $findUserByIdService;
-
+    protected $authSession;
+    
     public function initialize()
     {
-        // print_r('lala');
-        // die();
-        $this->findUserByIdService = $this->getDI()->get('findUserByIdService');
+        $this->authSession = $this->session->get('auth');
+        $this->view->setVar('auth',  $this->authSession);
     }
 
     public function indexAction()
     {
-       
+        $this->view->pick('front');
     }
 
-    public function getUserAction($userId)
-    {
-        $user = $this->findUserByIdService->execute($userId);
-        print_r($user);
-        die();
-    }
+   
+
 }

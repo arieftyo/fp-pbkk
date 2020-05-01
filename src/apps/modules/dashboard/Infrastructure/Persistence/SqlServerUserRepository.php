@@ -47,14 +47,20 @@ class SqlServerUserRepository implements UserRepositoryInterface{
         return $user;
     }
 
-    public function login($data){
+    public function login($data): User{
         $sql = "SELECT * from [user] WHERE email=:email and password=:password";
         $params = ['email' => $data['email'],
                 'password' => $data['password']
         ];
 
-        $result= $this->db->execute($sql, $params);
-        return $result;
+        $userResult = $this->db->fetchOne($sql, \Phalcon\Db\Enum::FETCH_ASSOC, $params);
+        $user = new User(
+            $userResult['id'],
+            $userResult['nama'],
+            $userResult['email'],
+            $userResult['password']
+        );
+        return $user;
     }
 
 }
